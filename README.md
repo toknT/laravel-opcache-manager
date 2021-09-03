@@ -1,5 +1,7 @@
 # laravel-opcache-manager
 
+[中文文档](./README_zh.md)
+
 opcache manager for laravel
 
 give a command `opcache-manager:clear` to reset opcache of web server from cli, more auto, more simple
@@ -12,7 +14,7 @@ I am using [php deployer](https://deployer.org/),so just add a task `opcache:res
 sequenceDiagram
     participant A as deploy tool
     participant B as php-cli
-    participant C as php-fpm
+    participant C as php-fpm(nginx)
     A->>B: time to clear opcache
     B-->>B: create a signed url
     B->>C: access the url to reset opcache
